@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <script src="https://kit.fontawesome.com/f43f0ce23f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+    html {
+    }
+    body {
+        margin: 0px;
+        font-family: 'Source Sans Pro';
+    }
+        .layoutWrap{
+            display: flex;
+            justify-content:space-between;
+            align-items : center;
+            background-color: #263343;
+            width: calc(100% - 40px);
+            /* height: 130px; */
+            padding: 20px;
+        }
+        .hamburgerBtn{
+            display: none        
+        }
+        .logo{
+            /* margin-left: 20px; */
+        }
+        .contentsList {
+            display: flex;
+            list-style:none;
+            padding-left: 0px;
+        }
+        .contentsList>li{
+            color: #FFFFFF;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 8px 12px;
+        }
+        .contentsList>li:hover{
+            background-color: #d49466;
+            border-radius: 4px;
+        }
+
+        .SNS{
+            font-size: 18px;
+            /* margin-right: 20px; */
+        }
+        .SNS>a{
+            color: #FFFFFF;
+            margin: 0px 5px;
+        }
+        @media screen and (max-width:760px){
+            .layoutWrap{
+                flex-direction: column;
+                /* min-height: 370px; */
+                text-align:center;
+            }
+
+            .contentsList {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+            .hamburgerBtn{
+                display: block;
+                position: absolute;
+                right: 30px;
+                font-size: 40px;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+            .SNS{
+                display: none;
+            }
+            .contentsList.active,
+            .SNS.active{
+                display: flex;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="layoutWrap">
+        <div class="logo"><a href="https://academy.dream-coding.com/"><img src="https://import.cdn.thinkific.com/292401/PuGMXOphTKWoVdN3FOd6_D__6___1__png" alt=""></a></div>
+        <ul class="contentsList">
+            <li>Home</li>
+            <li>Gallery</li>
+            <li>Weddings</li>
+            <li>FAQ</li>
+            <li>Bookings</li>
+        </ul>
+        <div class="SNS"><a href="https://twitter.com/?lang=ko"><i class="fab fa-twitter"></i></a> <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>  </div>
+        <div class="hamburgerBtn"><i class="fas fa-bars"></i></div>
+    </header>
+</body>
+</html>
+
+<script>
+    let hamburgerBtn = document.querySelector('.hamburgerBtn')
+    let contentsList = document.querySelector('.contentsList')
+    let SNS = document.querySelector('.SNS')
+
+    hamburgerBtn.addEventListener('click', ()=>{
+        contentsList.classList.toggle('active')
+        SNS.classList.toggle('active')
+        console.log(contentsList.classList)
+        console.log(SNS.classList)
+    });
+
+</script>
