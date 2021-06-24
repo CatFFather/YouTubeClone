@@ -197,11 +197,12 @@
 </body>
 
 <script>
-    let titleBtn = document.querySelector('.titleBtn')
+    let titleBtnIcon = document.querySelector('.fa-caret-down')
     let name = document.querySelector('.information>.title>.name')
 
-    titleBtn.addEventListener('click', (event)=>{
+    titleBtnIcon.addEventListener('click', (event)=>{
         name.classList.toggle('active')
+        titleBtnIcon.classList.toggle('rotate180')
         console.log(name.classList)
     });
 

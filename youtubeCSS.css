@@ -76,6 +76,10 @@ main{
 .information > .title> .titleBtn{
     color: #606060;
 }
+.rotate180{
+    transform: rotate(180deg);
+}
+
 .information > .viewCount{
     font-size: 14px;
     margin-bottom: 10px;
