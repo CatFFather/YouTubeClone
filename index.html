@@ -169,4 +169,16 @@
     </main>
     
 </body>
+
+<script>
+    let titleBtn = document.querySelector('.titleBtn')
+    let name = document.querySelector('.information>.title>.name')
+
+    titleBtn.addEventListener('click', (event)=>{
+        name.classList.toggle('titleActive')
+        console.log(name.classList)
+    });
+
+</script>
+
 </html>

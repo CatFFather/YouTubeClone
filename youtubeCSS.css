@@ -58,6 +58,10 @@ main{
     -webkit-line-clamp: 1; 
     overflow: hidden;
 }
+.titleActive{
+    display: block !important;
+}
+
 .information > .title> .titleBtn{
     color: #606060;
 }
