@@ -7,7 +7,8 @@
     <title>[MV] BOL4(볼빨간사춘기) _ Stars over me(별 보러 갈래?) - Youtube</title>
     <script src="https://kit.fontawesome.com/f43f0ce23f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./youtubeCSS.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -46,6 +47,27 @@
                     </div>
                     <div><button class="subBtn">구독</button></div>
                 </div>
+                <div class="contentsInfo">
+                    [MV] BOL4(볼빨간사춘기) _ Stars over me(별 보러 갈래?)
+                    <br/><br/>
+                    [공지] 1theK YouTube는 MV를 유통하는 공식 채널로, 1theK에 업로드된 MV 조회수 또한 음악방송 순위에 반영됩니다.
+                    <br/><br/>
+                    사춘기 소녀들의 성장통 [사춘기집Ⅰ 꽃기운] 
+                    <br/><br/>
+                    사랑스럽지만 위태롭고, 불안해서 더 찬란한 사춘기를 노래하는 소녀들의 첫 번째 계절, 봄
+                    봄의 시작을 알리는 사춘기 소녀들의 동화 같은 이야기의 첫 장을 열어본다.
+                    볼빨간사춘기 지음.
+                    <br/><br/>
+                    [꽃기운] 사춘기에 솟아나는 기운을 비유적으로 이르는 말
+                    <br/><br/>
+                    <br/>
+                    <a href="">#BOL4#볼빨간사춘기#Stars_over_me#별보러갈래#NEWRELEASE#MV#1theK#원더케이</a>
+                    <br/>
+                    ▶1theK FB  : <a href="http://www.facebook.com/1theK">http://www.facebook.com/1theK</a><br/>
+                    ▶1theK TW : <a href="https://twitter.com/1theK">https://twitter.com/1theK</a> <br/>
+                    ▶1theK Kakao : <a href="https://goo.gl/otRpZc">https://goo.gl/otRpZc</a><br/>
+                </div>
+                <div class="infoAdd"><span>더보기</span></div>
                 <hr>
             </div>
             <div class="otherContent">
@@ -175,8 +197,27 @@
     let name = document.querySelector('.information>.title>.name')
 
     titleBtn.addEventListener('click', (event)=>{
-        name.classList.toggle('titleActive')
+        name.classList.toggle('active')
         console.log(name.classList)
+    });
+
+    let infoAddBtn = false
+    let contentsInfo = document.querySelector('.information>.contentsInfo')
+    let infoAdd = document.querySelector('.information>.infoAdd>span')
+    
+    infoAdd.addEventListener('click', (event)=>{
+        contentsInfo.classList.toggle('active')
+        if(infoAddBtn==false){
+            console.log('infoAddBtn==false')
+            infoAddBtn = true
+            infoAdd.innerHTML = '간략히'
+        }else{
+            console.log('infoAddBtn==true')
+            infoAddBtn = false
+            infoAdd.innerHTML = '더보기'
+        }
+        console.log(contentsInfo.classList)
+        console.log(infoAdd)
     });
 
 </script>
